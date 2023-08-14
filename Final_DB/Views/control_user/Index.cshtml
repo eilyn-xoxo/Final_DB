@@ -1,0 +1,47 @@
+﻿@model System.Data.DataTable
+@{
+    ViewData["Title"] = "Usuarios registrados";
+
+}
+<br/>
+<div class="text-center">
+    <h1 class ="display-4"> Usuarios registrados</h1>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID Paciente</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Telefono</th>
+                <th>Sexo</th>
+                <th>Domicilio</th>
+                <th>Edad</th>
+                <th>Correo Electronico</th>
+                <th>ID_Seguro</th>
+                <th>ID Area Medica</th>
+            </tr>
+        </thead>
+        @{
+            
+                @foreach (var item in ViewBag.usuario)
+                {
+                    <tr>
+                    <td> @item.ID_Paciente</td>
+                    <td> @item.Nombre</td>
+                    <td> @item.Apellidos</td>
+                    <td> @item.Telefono</td>
+                    <td> @item.Sexo</td>
+                    <td> @item.Domicilio</td>
+                    <td> @item.Edad</td>
+                    <td> @item.Correo_Electronico</td>
+                    <td> @item.ID_Seguro</td>
+                    <td> @item.ID_AreaMedica</td>
+
+                    </tr>
+
+                }
+            }
+        
+    </table>
+</div>

@@ -1,0 +1,67 @@
+﻿@model Model_User
+
+@{
+    ViewData["Title"] = "Registro de Pacientes";
+}
+
+<h1> Registro de Pacientes </h1>
+
+<form method="post" class="form-floating">
+   
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input class="form-control" asp-for=Nombre/>
+    
+    </div>
+    <div class="form-group">
+        <label asp-for="Apellidos"></label>
+        <input class="form-control" asp-for=Apellidos />
+    
+    </div>
+    <div class="form-group">
+        <label asp-for="Telefono"></label>
+        <input class="form-control" asp-for=Telefono />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Sexo"></label>
+        <input class="form-control" asp-for=Sexo />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Domicilio"></label>
+        <input class="form-control" asp-for=Domicilio/>
+    
+    </div>
+    <div class="form-group">
+        <label asp-for="Edad"></label>
+        <input class="form-control" asp-for=Edad />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Correo_Electronico"></label>
+        <input class="form-control" asp-for=Correo_Electronico  />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="ID_Seguro"></label>        
+        <select name="ID_Seguro" id="seguro">
+            <option value="1">Senasa</option>
+            <option value="2">ARS Humano</option>
+            <option value="3">MAPFRE</option>
+            <option value="4">ARS Palic</option>
+        </select>
+
+    </div>
+    <br />
+     <div class="form-group">
+        <label asp-for="ID_AreaMedica"></label>
+        <input class="form-control" asp-for="ID_AreaMedica"/>
+
+    </div>
+
+    <br />
+    <div class="text-center panel-body">
+        <button type ="submit" class="btn btn-group-sm btn-primary">Registrar</button>
+    </div>
+</form>
